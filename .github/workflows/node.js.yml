@@ -25,8 +25,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install -g gulp
-    - run: npm install -g bower
-    - run: bower install
     - run: npm install
     - run: ./scripts/mongo-load/load-data-into-mongo.sh
     - run: npm run build --if-present
